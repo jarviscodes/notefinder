@@ -99,10 +99,10 @@ class GuitarString(object):
                         double_digit_toggle = False
             counter += 1
 
-        print(translated_string)
+        return translated_string
 
 # load the file
-with open('./tabs.txt', "r") as _tab_file:
+with open('./tab.txt', "r") as _tab_file:
     tab_data = [guitar_string.strip() for guitar_string in _tab_file.readlines() if len(guitar_string.strip()) > 0]
 
 all_necks = []
@@ -110,19 +110,14 @@ all_necks = []
 # Prepare a neck object
 new_neck = Neck()
 for line in tab_data:
+    new_neck.load_string(line)
     if new_neck.is_complete:
-        print("Neck Complete!")
-        print(new_neck)
         new_neck.translate_neck()
         all_necks.append(new_neck)
         new_neck = Neck()
-    else:
-        print(new_neck)
-    new_neck.load_string(line)
+
 
 
 for neck in all_necks:
     print(neck)
     print("\n")
-
-
