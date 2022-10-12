@@ -1,0 +1,5 @@
+venv/
+.pyc
+.pyd
+__pycache__/
+tabs.txt
