@@ -27,7 +27,7 @@ E|----------------------|
 
 It is important that all guitar strings are present in a neck block, and that each neck block is separated by one or more line breaks.
 
-Then you can run `python translator.py` and the script will output the guitar neck (to preserve rhythm/tremolo/h's or p's) with the tabs replaced by the correct note and it's octave.
+Then you can run `python mfinder.py` and the script will output the guitar neck (to preserve rhythm/tremolo/h's or p's) with the tabs replaced by the correct note and it's octave.
 
 ```
 (env) F:\TabsToNotes>python mfinder.py
